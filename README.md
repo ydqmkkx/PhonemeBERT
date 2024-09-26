@@ -65,8 +65,8 @@ from models import MpbertForPreTraining, PlbertForPreTraining
 mpbert_pt = MpbertForPreTraining.from_pretrained("ydqmkkx/mpbert")
 plbert_pt = PlbertForPreTraining.from_pretrained("ydqmkkx/plbert")
 
-mpbert_pt(**output, sup_phoneme_ids=sup_phoneme_generator(output.input_ids))
-plbert_pt(**output)
+mpbert_pt(**encoding, sup_phoneme_ids=sup_phoneme_generator(output.input_ids))
+plbert_pt(**encoding)
 ```
 
 ## Citation
