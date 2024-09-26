@@ -86,3 +86,10 @@ plbert_pt(**encoding)
   year = {2023},
 }
 ```
+## Contributors
+This project is finished by several members in [Sarulab](https://www.sp.ipc.i.u-tokyo.ac.jp/index-en), the University of Tokyo.
+- [Dong Yang](https://ydqmkkx.github.io/)
+- [Yuki Saito](https://sython.org/)
+- [Takaaki Saeki](https://takaaki-saeki.github.io/)
+- [Wataru Nataka](https://wataru-nakata.github.io/)
+- [Hiroshi Saruwatari](https://scholar.google.com/citations?user=OS1XAoMAAAAJ&hl=en)
