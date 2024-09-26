@@ -1,0 +1,908 @@
+{
+    "0": {
+        "arpabet": "[PAD]",
+        "initial": true,
+        "ipa": "[PAD]",
+        "punctuation": false
+    },
+    "1": {
+        "arpabet": "[CLS]",
+        "initial": true,
+        "ipa": "[CLS]",
+        "punctuation": false
+    },
+    "2": {
+        "arpabet": "[SPE]",
+        "initial": true,
+        "ipa": "[SPE]",
+        "punctuation": false
+    },
+    "3": {
+        "arpabet": "[MASK]",
+        "initial": true,
+        "ipa": "[MASK]",
+        "punctuation": false
+    },
+    "4": {
+        "arpabet": "[UNK]",
+        "initial": true,
+        "ipa": "[UNK]",
+        "punctuation": false
+    },
+    "5": {
+        "arpabet": "AA",
+        "initial": true,
+        "ipa": "ɑ",
+        "punctuation": false
+    },
+    "6": {
+        "arpabet": "AE",
+        "initial": true,
+        "ipa": "æ",
+        "punctuation": false
+    },
+    "7": {
+        "arpabet": "AH",
+        "initial": true,
+        "ipa": "ʌ",
+        "punctuation": false
+    },
+    "8": {
+        "arpabet": "AO",
+        "initial": true,
+        "ipa": "ɔ",
+        "punctuation": false
+    },
+    "9": {
+        "arpabet": "AW",
+        "initial": true,
+        "ipa": "a",
+        "punctuation": false
+    },
+    "10": {
+        "arpabet": "AY",
+        "initial": true,
+        "ipa": "A",
+        "punctuation": false
+    },
+    "11": {
+        "arpabet": "B",
+        "initial": true,
+        "ipa": "b",
+        "punctuation": false
+    },
+    "12": {
+        "arpabet": "CH",
+        "initial": true,
+        "ipa": "c",
+        "punctuation": false
+    },
+    "13": {
+        "arpabet": "D",
+        "initial": true,
+        "ipa": "d",
+        "punctuation": false
+    },
+    "14": {
+        "arpabet": "DH",
+        "initial": true,
+        "ipa": "ð",
+        "punctuation": false
+    },
+    "15": {
+        "arpabet": "EH",
+        "initial": true,
+        "ipa": "e",
+        "punctuation": false
+    },
+    "16": {
+        "arpabet": "ER",
+        "initial": true,
+        "ipa": "ɜ",
+        "punctuation": false
+    },
+    "17": {
+        "arpabet": "EY",
+        "initial": true,
+        "ipa": "E",
+        "punctuation": false
+    },
+    "18": {
+        "arpabet": "F",
+        "initial": true,
+        "ipa": "f",
+        "punctuation": false
+    },
+    "19": {
+        "arpabet": "G",
+        "initial": true,
+        "ipa": "g",
+        "punctuation": false
+    },
+    "20": {
+        "arpabet": "HH",
+        "initial": true,
+        "ipa": "h",
+        "punctuation": false
+    },
+    "21": {
+        "arpabet": "IH",
+        "initial": true,
+        "ipa": "ɪ",
+        "punctuation": false
+    },
+    "22": {
+        "arpabet": "IY",
+        "initial": true,
+        "ipa": "i",
+        "punctuation": false
+    },
+    "23": {
+        "arpabet": "JH",
+        "initial": true,
+        "ipa": "j",
+        "punctuation": false
+    },
+    "24": {
+        "arpabet": "K",
+        "initial": true,
+        "ipa": "k",
+        "punctuation": false
+    },
+    "25": {
+        "arpabet": "L",
+        "initial": true,
+        "ipa": "l",
+        "punctuation": false
+    },
+    "26": {
+        "arpabet": "M",
+        "initial": true,
+        "ipa": "m",
+        "punctuation": false
+    },
+    "27": {
+        "arpabet": "N",
+        "initial": true,
+        "ipa": "n",
+        "punctuation": false
+    },
+    "28": {
+        "arpabet": "NG",
+        "initial": true,
+        "ipa": "ŋ",
+        "punctuation": false
+    },
+    "29": {
+        "arpabet": "OW",
+        "initial": true,
+        "ipa": "o",
+        "punctuation": false
+    },
+    "30": {
+        "arpabet": "OY",
+        "initial": true,
+        "ipa": "O",
+        "punctuation": false
+    },
+    "31": {
+        "arpabet": "P",
+        "initial": true,
+        "ipa": "p",
+        "punctuation": false
+    },
+    "32": {
+        "arpabet": "R",
+        "initial": true,
+        "ipa": "r",
+        "punctuation": false
+    },
+    "33": {
+        "arpabet": "S",
+        "initial": true,
+        "ipa": "s",
+        "punctuation": false
+    },
+    "34": {
+        "arpabet": "SH",
+        "initial": true,
+        "ipa": "ʃ",
+        "punctuation": false
+    },
+    "35": {
+        "arpabet": "T",
+        "initial": true,
+        "ipa": "t",
+        "punctuation": false
+    },
+    "36": {
+        "arpabet": "TH",
+        "initial": true,
+        "ipa": "θ",
+        "punctuation": false
+    },
+    "37": {
+        "arpabet": "UH",
+        "initial": true,
+        "ipa": "ʊ",
+        "punctuation": false
+    },
+    "38": {
+        "arpabet": "UW",
+        "initial": true,
+        "ipa": "u",
+        "punctuation": false
+    },
+    "39": {
+        "arpabet": "V",
+        "initial": true,
+        "ipa": "v",
+        "punctuation": false
+    },
+    "40": {
+        "arpabet": "W",
+        "initial": true,
+        "ipa": "w",
+        "punctuation": false
+    },
+    "41": {
+        "arpabet": "Y",
+        "initial": true,
+        "ipa": "J",
+        "punctuation": false
+    },
+    "42": {
+        "arpabet": "Z",
+        "initial": true,
+        "ipa": "z",
+        "punctuation": false
+    },
+    "43": {
+        "arpabet": "ZH",
+        "initial": true,
+        "ipa": "ʒ",
+        "punctuation": false
+    },
+    "44": {
+        "arpabet": "AA",
+        "initial": false,
+        "ipa": "ɑ",
+        "punctuation": false
+    },
+    "45": {
+        "arpabet": "AE",
+        "initial": false,
+        "ipa": "æ",
+        "punctuation": false
+    },
+    "46": {
+        "arpabet": "AH",
+        "initial": false,
+        "ipa": "ʌ",
+        "punctuation": false
+    },
+    "47": {
+        "arpabet": "AO",
+        "initial": false,
+        "ipa": "ɔ",
+        "punctuation": false
+    },
+    "48": {
+        "arpabet": "AW",
+        "initial": false,
+        "ipa": "a",
+        "punctuation": false
+    },
+    "49": {
+        "arpabet": "AY",
+        "initial": false,
+        "ipa": "A",
+        "punctuation": false
+    },
+    "50": {
+        "arpabet": "B",
+        "initial": false,
+        "ipa": "b",
+        "punctuation": false
+    },
+    "51": {
+        "arpabet": "CH",
+        "initial": false,
+        "ipa": "c",
+        "punctuation": false
+    },
+    "52": {
+        "arpabet": "D",
+        "initial": false,
+        "ipa": "d",
+        "punctuation": false
+    },
+    "53": {
+        "arpabet": "DH",
+        "initial": false,
+        "ipa": "ð",
+        "punctuation": false
+    },
+    "54": {
+        "arpabet": "EH",
+        "initial": false,
+        "ipa": "e",
+        "punctuation": false
+    },
+    "55": {
+        "arpabet": "ER",
+        "initial": false,
+        "ipa": "ɜ",
+        "punctuation": false
+    },
+    "56": {
+        "arpabet": "EY",
+        "initial": false,
+        "ipa": "E",
+        "punctuation": false
+    },
+    "57": {
+        "arpabet": "F",
+        "initial": false,
+        "ipa": "f",
+        "punctuation": false
+    },
+    "58": {
+        "arpabet": "G",
+        "initial": false,
+        "ipa": "g",
+        "punctuation": false
+    },
+    "59": {
+        "arpabet": "HH",
+        "initial": false,
+        "ipa": "h",
+        "punctuation": false
+    },
+    "60": {
+        "arpabet": "IH",
+        "initial": false,
+        "ipa": "ɪ",
+        "punctuation": false
+    },
+    "61": {
+        "arpabet": "IY",
+        "initial": false,
+        "ipa": "i",
+        "punctuation": false
+    },
+    "62": {
+        "arpabet": "JH",
+        "initial": false,
+        "ipa": "j",
+        "punctuation": false
+    },
+    "63": {
+        "arpabet": "K",
+        "initial": false,
+        "ipa": "k",
+        "punctuation": false
+    },
+    "64": {
+        "arpabet": "L",
+        "initial": false,
+        "ipa": "l",
+        "punctuation": false
+    },
+    "65": {
+        "arpabet": "M",
+        "initial": false,
+        "ipa": "m",
+        "punctuation": false
+    },
+    "66": {
+        "arpabet": "N",
+        "initial": false,
+        "ipa": "n",
+        "punctuation": false
+    },
+    "67": {
+        "arpabet": "NG",
+        "initial": false,
+        "ipa": "ŋ",
+        "punctuation": false
+    },
+    "68": {
+        "arpabet": "OW",
+        "initial": false,
+        "ipa": "o",
+        "punctuation": false
+    },
+    "69": {
+        "arpabet": "OY",
+        "initial": false,
+        "ipa": "O",
+        "punctuation": false
+    },
+    "70": {
+        "arpabet": "P",
+        "initial": false,
+        "ipa": "p",
+        "punctuation": false
+    },
+    "71": {
+        "arpabet": "R",
+        "initial": false,
+        "ipa": "r",
+        "punctuation": false
+    },
+    "72": {
+        "arpabet": "S",
+        "initial": false,
+        "ipa": "s",
+        "punctuation": false
+    },
+    "73": {
+        "arpabet": "SH",
+        "initial": false,
+        "ipa": "ʃ",
+        "punctuation": false
+    },
+    "74": {
+        "arpabet": "T",
+        "initial": false,
+        "ipa": "t",
+        "punctuation": false
+    },
+    "75": {
+        "arpabet": "TH",
+        "initial": false,
+        "ipa": "θ",
+        "punctuation": false
+    },
+    "76": {
+        "arpabet": "UH",
+        "initial": false,
+        "ipa": "ʊ",
+        "punctuation": false
+    },
+    "77": {
+        "arpabet": "UW",
+        "initial": false,
+        "ipa": "u",
+        "punctuation": false
+    },
+    "78": {
+        "arpabet": "V",
+        "initial": false,
+        "ipa": "v",
+        "punctuation": false
+    },
+    "79": {
+        "arpabet": "W",
+        "initial": false,
+        "ipa": "w",
+        "punctuation": false
+    },
+    "80": {
+        "arpabet": "Y",
+        "initial": false,
+        "ipa": "J",
+        "punctuation": false
+    },
+    "81": {
+        "arpabet": "Z",
+        "initial": false,
+        "ipa": "z",
+        "punctuation": false
+    },
+    "82": {
+        "arpabet": "ZH",
+        "initial": false,
+        "ipa": "ʒ",
+        "punctuation": false
+    },
+    "83": {
+        "arpabet": "!",
+        "initial": true,
+        "ipa": "!",
+        "punctuation": true
+    },
+    "84": {
+        "arpabet": "\"",
+        "initial": true,
+        "ipa": "\"",
+        "punctuation": true
+    },
+    "85": {
+        "arpabet": "#",
+        "initial": true,
+        "ipa": "#",
+        "punctuation": true
+    },
+    "86": {
+        "arpabet": "$",
+        "initial": true,
+        "ipa": "$",
+        "punctuation": true
+    },
+    "87": {
+        "arpabet": "%",
+        "initial": true,
+        "ipa": "%",
+        "punctuation": true
+    },
+    "88": {
+        "arpabet": "&",
+        "initial": true,
+        "ipa": "&",
+        "punctuation": true
+    },
+    "89": {
+        "arpabet": "'",
+        "initial": true,
+        "ipa": "'",
+        "punctuation": true
+    },
+    "90": {
+        "arpabet": "(",
+        "initial": true,
+        "ipa": "(",
+        "punctuation": true
+    },
+    "91": {
+        "arpabet": ")",
+        "initial": true,
+        "ipa": ")",
+        "punctuation": true
+    },
+    "92": {
+        "arpabet": "*",
+        "initial": true,
+        "ipa": "*",
+        "punctuation": true
+    },
+    "93": {
+        "arpabet": "+",
+        "initial": true,
+        "ipa": "+",
+        "punctuation": true
+    },
+    "94": {
+        "arpabet": ",",
+        "initial": true,
+        "ipa": ",",
+        "punctuation": true
+    },
+    "95": {
+        "arpabet": "-",
+        "initial": true,
+        "ipa": "-",
+        "punctuation": true
+    },
+    "96": {
+        "arpabet": ".",
+        "initial": true,
+        "ipa": ".",
+        "punctuation": true
+    },
+    "97": {
+        "arpabet": "/",
+        "initial": true,
+        "ipa": "/",
+        "punctuation": true
+    },
+    "98": {
+        "arpabet": ":",
+        "initial": true,
+        "ipa": ":",
+        "punctuation": true
+    },
+    "99": {
+        "arpabet": ";",
+        "initial": true,
+        "ipa": ";",
+        "punctuation": true
+    },
+    "100": {
+        "arpabet": "<",
+        "initial": true,
+        "ipa": "<",
+        "punctuation": true
+    },
+    "101": {
+        "arpabet": "=",
+        "initial": true,
+        "ipa": "=",
+        "punctuation": true
+    },
+    "102": {
+        "arpabet": ">",
+        "initial": true,
+        "ipa": ">",
+        "punctuation": true
+    },
+    "103": {
+        "arpabet": "?",
+        "initial": true,
+        "ipa": "?",
+        "punctuation": true
+    },
+    "104": {
+        "arpabet": "@",
+        "initial": true,
+        "ipa": "@",
+        "punctuation": true
+    },
+    "105": {
+        "arpabet": "[",
+        "initial": true,
+        "ipa": "[",
+        "punctuation": true
+    },
+    "106": {
+        "arpabet": "\\",
+        "initial": true,
+        "ipa": "\\",
+        "punctuation": true
+    },
+    "107": {
+        "arpabet": "]",
+        "initial": true,
+        "ipa": "]",
+        "punctuation": true
+    },
+    "108": {
+        "arpabet": "^",
+        "initial": true,
+        "ipa": "^",
+        "punctuation": true
+    },
+    "109": {
+        "arpabet": "_",
+        "initial": true,
+        "ipa": "_",
+        "punctuation": true
+    },
+    "110": {
+        "arpabet": "`",
+        "initial": true,
+        "ipa": "`",
+        "punctuation": true
+    },
+    "111": {
+        "arpabet": "{",
+        "initial": true,
+        "ipa": "{",
+        "punctuation": true
+    },
+    "112": {
+        "arpabet": "|",
+        "initial": true,
+        "ipa": "|",
+        "punctuation": true
+    },
+    "113": {
+        "arpabet": "}",
+        "initial": true,
+        "ipa": "}",
+        "punctuation": true
+    },
+    "114": {
+        "arpabet": "~",
+        "initial": true,
+        "ipa": "~",
+        "punctuation": true
+    },
+    "115": {
+        "arpabet": "..",
+        "initial": true,
+        "ipa": "冫",
+        "punctuation": true
+    },
+    "116": {
+        "arpabet": "...",
+        "initial": true,
+        "ipa": "氵",
+        "punctuation": true
+    },
+    "117": {
+        "arpabet": "!",
+        "initial": false,
+        "ipa": "!",
+        "punctuation": true
+    },
+    "118": {
+        "arpabet": "\"",
+        "initial": false,
+        "ipa": "\"",
+        "punctuation": true
+    },
+    "119": {
+        "arpabet": "#",
+        "initial": false,
+        "ipa": "#",
+        "punctuation": true
+    },
+    "120": {
+        "arpabet": "$",
+        "initial": false,
+        "ipa": "$",
+        "punctuation": true
+    },
+    "121": {
+        "arpabet": "%",
+        "initial": false,
+        "ipa": "%",
+        "punctuation": true
+    },
+    "122": {
+        "arpabet": "&",
+        "initial": false,
+        "ipa": "&",
+        "punctuation": true
+    },
+    "123": {
+        "arpabet": "'",
+        "initial": false,
+        "ipa": "'",
+        "punctuation": true
+    },
+    "124": {
+        "arpabet": "(",
+        "initial": false,
+        "ipa": "(",
+        "punctuation": true
+    },
+    "125": {
+        "arpabet": ")",
+        "initial": false,
+        "ipa": ")",
+        "punctuation": true
+    },
+    "126": {
+        "arpabet": "*",
+        "initial": false,
+        "ipa": "*",
+        "punctuation": true
+    },
+    "127": {
+        "arpabet": "+",
+        "initial": false,
+        "ipa": "+",
+        "punctuation": true
+    },
+    "128": {
+        "arpabet": ",",
+        "initial": false,
+        "ipa": ",",
+        "punctuation": true
+    },
+    "129": {
+        "arpabet": "-",
+        "initial": false,
+        "ipa": "-",
+        "punctuation": true
+    },
+    "130": {
+        "arpabet": ".",
+        "initial": false,
+        "ipa": ".",
+        "punctuation": true
+    },
+    "131": {
+        "arpabet": "/",
+        "initial": false,
+        "ipa": "/",
+        "punctuation": true
+    },
+    "132": {
+        "arpabet": ":",
+        "initial": false,
+        "ipa": ":",
+        "punctuation": true
+    },
+    "133": {
+        "arpabet": ";",
+        "initial": false,
+        "ipa": ";",
+        "punctuation": true
+    },
+    "134": {
+        "arpabet": "<",
+        "initial": false,
+        "ipa": "<",
+        "punctuation": true
+    },
+    "135": {
+        "arpabet": "=",
+        "initial": false,
+        "ipa": "=",
+        "punctuation": true
+    },
+    "136": {
+        "arpabet": ">",
+        "initial": false,
+        "ipa": ">",
+        "punctuation": true
+    },
+    "137": {
+        "arpabet": "?",
+        "initial": false,
+        "ipa": "?",
+        "punctuation": true
+    },
+    "138": {
+        "arpabet": "@",
+        "initial": false,
+        "ipa": "@",
+        "punctuation": true
+    },
+    "139": {
+        "arpabet": "[",
+        "initial": false,
+        "ipa": "[",
+        "punctuation": true
+    },
+    "140": {
+        "arpabet": "\\",
+        "initial": false,
+        "ipa": "\\",
+        "punctuation": true
+    },
+    "141": {
+        "arpabet": "]",
+        "initial": false,
+        "ipa": "]",
+        "punctuation": true
+    },
+    "142": {
+        "arpabet": "^",
+        "initial": false,
+        "ipa": "^",
+        "punctuation": true
+    },
+    "143": {
+        "arpabet": "_",
+        "initial": false,
+        "ipa": "_",
+        "punctuation": true
+    },
+    "144": {
+        "arpabet": "`",
+        "initial": false,
+        "ipa": "`",
+        "punctuation": true
+    },
+    "145": {
+        "arpabet": "{",
+        "initial": false,
+        "ipa": "{",
+        "punctuation": true
+    },
+    "146": {
+        "arpabet": "|",
+        "initial": false,
+        "ipa": "|",
+        "punctuation": true
+    },
+    "147": {
+        "arpabet": "}",
+        "initial": false,
+        "ipa": "}",
+        "punctuation": true
+    },
+    "148": {
+        "arpabet": "~",
+        "initial": false,
+        "ipa": "~",
+        "punctuation": true
+    },
+    "149": {
+        "arpabet": "..",
+        "initial": false,
+        "ipa": "冫",
+        "punctuation": true
+    },
+    "150": {
+        "arpabet": "...",
+        "initial": false,
+        "ipa": "氵",
+        "punctuation": true
+    }
+}
