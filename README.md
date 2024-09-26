@@ -3,8 +3,10 @@ Unofficial PyTorch implementation of Mixed-Phoneme BERT (MP BERT) and Phoneme-Le
 
 ## Introduction
 The implementations follow the Hugging Face's frameworks.\
-We refer to the implementations of [BERT](https://github.com/huggingface/transformers/blob/main/src/transformers/models/bert/modeling_bert.py), [RoBERTa](https://github.com/huggingface/transformers/blob/main/src/transformers/models/roberta/modeling_roberta.py), and [DeBERTa](https://github.com/huggingface/transformers/blob/main/src/transformers/models/deberta/modeling_deberta.py).\
-The pre-training scripts are planned to be open-sourced in the future.
+We refer to the implementations of [BERT](https://github.com/huggingface/transformers/blob/main/src/transformers/models/bert/modeling_bert.py), [RoBERTa](https://github.com/huggingface/transformers/blob/main/src/transformers/models/roberta/modeling_roberta.py), and [DeBERTa](https://github.com/huggingface/transformers/blob/main/src/transformers/models/deberta/modeling_deberta.py).
+
+The weights are stored in Hugging Face: [MP BERT](https://huggingface.co/ydqmkkx/mpbert/tree/main), [PL BERT](https://huggingface.co/ydqmkkx/plbert/tree/main).\
+More details and pre-training scripts are planned to be open-sourced in the future.
 
 Pre-training configurations:
 | | |
@@ -24,34 +26,32 @@ The [PhonemeTokenizer](https://github.com/ydqmkkx/PhonemeTokenizer) is needed:
 ```bash
 pip install git+https://github.com/ydqmkkx/PhonemeTokenizer.git
 ```
-Requirements:
-```
-torch>=2.0.0
-transformers==4.41.2
-```
 Then the repository should be git-cloned:
 ```bash
 git clone https://github.com/ydqmkkx/PhonemeBERT
 cd PhonemeBERT
 ```
+Requirements:
+```
+torch>=2.0.0
+transformers==4.41.2
+```
 
 ## Usage
 ```python
 from PhonemeTokenizer import PhonemeTokenizer
-from models import PhonemeBertModel
-
 p_tn = PhonemeTokenizer()
+encoding = p_tn("hello, world", return_tensors="pt")
+
+from models import PhonemeBertModel
 mpbert = PhonemeBertModel.from_pretrained("ydqmkkx/mpbert")
 plbert = PhonemeBertModel.from_pretrained("ydqmkkx/plbert")
 
-encoding = p_tn("hello, world", return_tensors="pt")
-
-# PLBERT only needs phoneme tokens as input
+# PL BERT only needs phoneme tokens as input
 plbert(**encoding)
 
-# MPBERT needs both phoneme and sup-phoneme tokens as input
+# MP BERT needs both phoneme and sup-phoneme tokens as input
 from utils import sup_phoneme_generator
-
 sup_phoneme_ids = sup_phoneme_generator(encoding.input_ids)
 mpbert(**encoding, sup_phoneme_ids=sup_phoneme_ids)
 
@@ -59,6 +59,14 @@ mpbert(**encoding, sup_phoneme_ids=sup_phoneme_ids)
 # So we can input without attention_mask
 plbert(input_ids=encoding.input_ids)
 mpbert(input_ids=encoding.input_ids, sup_phoneme_ids=sup_phoneme_ids)
+
+# The pre-training models can also be loaded
+from models import MpbertForPreTraining, PlbertForPreTraining
+mpbert_pt = MpbertForPreTraining.from_pretrained("ydqmkkx/mpbert")
+plbert_pt = PlbertForPreTraining.from_pretrained("ydqmkkx/plbert")
+
+mpbert_pt(**output, sup_phoneme_ids=sup_phoneme_generator(output.input_ids))
+plbert_pt(**output)
 ```
 
 ## Citation

@@ -411,7 +411,7 @@ class PlbertForPreTraining(PhonemeBertPreTrainedModel):
         encoder_hidden_states: Optional[torch.FloatTensor] = None,
         encoder_attention_mask: Optional[torch.FloatTensor] = None,
         labels: Optional[torch.LongTensor] = None,
-        tgt_ids: Optional[torch.LongTensor] = None,
+        word_labels: Optional[torch.LongTensor] = None,
         sup_phoneme_ids: Optional[torch.LongTensor] = None,
         sup_phoneme_labels: Optional[torch.LongTensor] = None,
         pooling_matrices: Optional[torch.FloatTensor] = None,
@@ -441,10 +441,14 @@ class PlbertForPreTraining(PhonemeBertPreTrainedModel):
         p2g_prediction_scores = self.p2g_head(sequence_output)
 
         total_loss = None
-        if labels is not None and tgt_ids is not None:
-            loss_fct = CrossEntropyLoss()
+        mlm_loss = None
+        p2g_loss = None
+        loss_fct = CrossEntropyLoss()
+        if labels is not None:
             mlm_loss = loss_fct(mlm_prediction_scores.view(-1, self.config.vocab_size), labels.view(-1))
-            p2g_loss = loss_fct(p2g_prediction_scores.view(-1, self.config.grapheme_vocab_size), tgt_ids.view(-1))
+        if word_labels is not None:
+            p2g_loss = loss_fct(p2g_prediction_scores.view(-1, self.config.grapheme_vocab_size), word_labels.view(-1))
+        if labels is not None and word_labels is not None:
             total_loss = mlm_loss + p2g_loss
 
         if not return_dict:
@@ -452,7 +456,7 @@ class PlbertForPreTraining(PhonemeBertPreTrainedModel):
             return ((total_loss,) + output) if total_loss is not None else output
 
         return PlbertForPreTrainingOutput(
-            loss=total_loss,
+            loss = total_loss,
             mlm_loss = mlm_loss,
             p2g_loss = p2g_loss,
             mlm_prediction_logits = mlm_prediction_scores,
@@ -496,7 +500,6 @@ class MpbertForPreTraining(PhonemeBertPreTrainedModel):
         encoder_hidden_states: Optional[torch.FloatTensor] = None,
         encoder_attention_mask: Optional[torch.FloatTensor] = None,
         labels: Optional[torch.LongTensor] = None,
-        tgt_ids: Optional[torch.LongTensor] = None,
         sup_phoneme_ids: Optional[torch.LongTensor] = None,
         sup_phoneme_labels: Optional[torch.LongTensor] = None,
         pooling_matrices: Optional[torch.FloatTensor] = None,
@@ -524,14 +527,18 @@ class MpbertForPreTraining(PhonemeBertPreTrainedModel):
 
         mlm_prediction_scores = self.mlm_head(sequence_output)
         sp_prediction_scores = self.sp_head(sequence_output)
-        pooling_matrices = pooling_matrices.to(sp_prediction_scores.dtype)
-        sp_prediction_scores = torch.einsum('bse, bps -> bpe', sp_prediction_scores, pooling_matrices).contiguous()
-
+    
         total_loss = None
-        if labels is not None and tgt_ids is not None:
-            loss_fct = CrossEntropyLoss()
+        mlm_loss = None
+        sp_loss = None
+        loss_fct = CrossEntropyLoss()
+        if labels is not None:
             mlm_loss = loss_fct(mlm_prediction_scores.view(-1, self.config.vocab_size), labels.view(-1))
+        if sup_phoneme_labels is not None:
+            pooling_matrices = pooling_matrices.to(sp_prediction_scores.dtype)
+            sp_prediction_scores = torch.einsum('bse, bps -> bpe', sp_prediction_scores, pooling_matrices).contiguous()
             sp_loss = loss_fct(sp_prediction_scores.view(-1, self.config.sup_phoneme_vocab_size), sup_phoneme_labels.view(-1))
+        if labels is not None and sup_phoneme_labels is not None:
             total_loss = mlm_loss + sp_loss
 
         if not return_dict:
@@ -539,7 +546,7 @@ class MpbertForPreTraining(PhonemeBertPreTrainedModel):
             return ((total_loss,) + output) if total_loss is not None else output
 
         return MpbertForPreTrainingOutput(
-            loss=total_loss,
+            loss = total_loss,
             mlm_loss = mlm_loss,
             sp_loss = sp_loss,
             mlm_prediction_logits = mlm_prediction_scores,
