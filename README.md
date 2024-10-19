@@ -11,7 +11,7 @@ More details and pre-training scripts are planned to be open-sourced in the futu
 Pre-training configurations:
 | | |
 | - | - |
-| BERT backbone | vanilla BERT<sub>BASE</sub>
+| BERT backbone | vanilla BERT<sub>BASE</sub> |
 | Corpus | BookCorpus & English Wikipedia |
 | Mini-batch   | 2,000 |
 | Steps   | 90,000 (about 10 epochs) |
@@ -20,6 +20,8 @@ Pre-training configurations:
 | Scheduler | Linear |
 | Warm-up steps | 9,000 (10%) |
 | Peak learning rate | 5 × 10<sup>-4</sup> |
+| Environment | 8 × NVIDIA 100 40GB GPUs |
+| Training duration | 270 hours (MP BERT), 290 hours (PL BERT)|
 
 ## Install
 The [PhonemeTokenizer](https://github.com/ydqmkkx/PhonemeTokenizer) is needed:
